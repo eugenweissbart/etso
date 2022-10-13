@@ -2,7 +2,6 @@ defmodule Northwind.Model.Address do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @primary_key false
   embedded_schema do
     field :city, :string
     field :country, :string
