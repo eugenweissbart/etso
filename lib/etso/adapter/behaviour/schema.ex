@@ -8,7 +8,7 @@ defmodule Etso.Adapter.Behaviour.Schema do
   @impl Ecto.Adapter.Schema
   def autogenerate(:id), do: :erlang.unique_integer()
   def autogenerate(:binary_id), do: Ecto.UUID.bingenerate()
-  def autogenerate(:embed_id), do: Ecto.UUID.bingenerate()
+  def autogenerate(:embed_id), do: Ecto.UUID.autogenerate()
 
   @impl Ecto.Adapter.Schema
   def insert_all(%{repo: repo}, %{schema: schema}, _, entries, _, _, _, _) do

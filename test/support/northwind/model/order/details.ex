@@ -2,7 +2,6 @@ defmodule Northwind.Model.Order.Details do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @primary_key false
   embedded_schema do
     field :discount, :float
     field :product_id, :integer
